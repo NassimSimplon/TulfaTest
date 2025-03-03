@@ -20,93 +20,36 @@ Tulfa App is a modern web application built with Vite and React. It showcases a 
 ## Folder Structure
 ```
     └── 📁src
-        └── App.css
-        └── App.jsx
         └── 📁assets
-            └── AnimLogo.jsx
-            └── CloseButtonIcon.jsx
-            └── PlusIcon.jsx
-            └── text.svg
-            └── tuflaColorfulIcon.jsx
-            └── tuflaIcon.jsx
+            └── Svg.jsx
         └── 📁Components
-            └── 📁AutoSlider
-                └── AutoSlider.css
-                └── AutoSlider.jsx
-            └── 📁BannerSection
-                └── BannerSection.css
-                └── BannerSection.jsx
+            └── 📁ComponenName
+                └── ComponenName.css
+                └── ComponenName.jsx
                 └── index.jsx
-            └── 📁CustomizedSofas
-                └── CustomizedSofas.css
-                └── CustomizedSofas.jsx
-                └── index.js
-            └── 📁FurnitureSection
-                └── FurnitureSection.css
-                └── FurnitureSection.jsx
-                └── index.jsx
-            └── 📁GalleryImage
-                └── GalleryImage.jsx
-                └── index.jsx
-            └── 📁ManualSlider
-                └── index.jsx
-                └── ManualSlider.css
-                └── ManualSlider.jsx
-            └── 📁Modals
-                └── 📁CloserLookModal
-                    └── CloserLookModal.css
-                    └── CloserLookModal.jsx
-                    └── index.jsx
-                └── 📁RoomDetailsModal
-                    └── index.jsx
-                    └── RoomDetailsModal.css
-                    └── RoomDetailsModal.jsx
-            └── 📁OutroSection
-                └── index.jsx
-                └── OutroSection.css
-                └── OutroSection.jsx
-            └── 📁SizeOfFurnitureSection
-                └── index.jsx
-                └── SizeOfFurnitureSection.css
-                └── SizeOfFurnitureSection.jsx
-            └── 📁VideoSection
-                └── index.jsx
-                └── VideoSection.css
-                └── VideoSection.jsx
-            └── 📁WorkCard
-                └── index.jsx
-                └── WorkCard.css
-                └── WorkCard.jsx
-            └── 📁WorkPresentation
-                └── index.jsx
-                └── WorkPresentation.css
-                └── WorkPresentation.jsx
         └── 📁CustomHooks
-            └── useImageSlider.jsx
-            └── useModal.jsx
-            └── useScrollTrigger.jsx
+            └── useCustomHooks.jsx
         └── 📁HOC
-            └── LazyLoader.jsx
-        └── index.css
+            └── HigherOrdeComponent.jsx
         └── 📁Layouts
             └── Main.jsx
-            └── 📁StickySection
-                └── StickySection.css
-                └── StickySection.jsx
-        └── main.jsx
+            └── 📁LayoutName
+                └── LayoutName.css
+                └── LayoutName.jsx
+                └── index.jsx
         └── 📁ReUsableComponents
-            └── 📁ResponsiveImage
+            └── 📁ReUsableComponentName
                 └── index.jsx
-                └── ResponsiveImage.css
-                └── ResponsiveImage.jsx
-            └── 📁VideoPlayer
-                └── index.jsx
-                └── VideoPlayer.jsx
+                └── ReUsableComponentName.css
+                └── ReUsableComponentName.jsx
         └── 📁Shared
             └── 📁navbar
                 └── index.jsx
                 └── navbar.css
                 └── navbar.jsx
+        └── App.css
+        └── App.jsx
+
     └── .gitignore
     └── eslint.config.js
     └── index.html
