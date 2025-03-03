@@ -7,7 +7,7 @@ Tulfa App is a modern web application built with Vite and React. It showcases a 
 - **Responsive Design**: Built with mobile-first principles for a seamless user experience across devices.
 - **Reusable Components**: Modular components like `ResponsiveImage`, `VideoPlayer`, and custom hooks for easy reuse.
 - **Interactive Elements**: Hard Coded auto-sliders, manual sliders, and modals and animation.
-- **Performance Optimized**: Uses lazy loading, modern image formats (WebP), and Convert the images to cdn.
+- **Performance Optimized**: Uses lazy loading, modern image formats (WebP), and Convert the images to CDN.
 - **Custom Hooks**: Includes reusable hooks like `useImageSlider`, `useModal`, and `useScrollTrigger`.
 - **Higher order component**: use a advanced React design pattern like the higher order component
 - **Code Refactoring concept**:that makes the component Smaller and Readable and faster (performance and maintenance) 
