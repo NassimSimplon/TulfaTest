@@ -13,6 +13,12 @@ Tulfa App is a modern web application built with Vite and React. It showcases a 
 - **Code Refactoring concept**:that makes the component Smaller and Readable and faster (performance and maintenance) 
 - **Css**: use Variables and  add a global className for animations in the app.css to minimize the code and order the css in a good structure 
 
+## The App After the LightHouse Test:
+
+![Furniture Image](public/lightHouse.png)
+
+## Folder Structure
+
 ## Folder Structure
 ```
     └── 📁public
