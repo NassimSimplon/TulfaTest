@@ -15,15 +15,17 @@
 }
 
 .RoomDetailsModal-box {
-    width           : 100%;
-    max-width       : 960px;
-    height          : fit-content;
-    background-color: var(--white);
-    border-radius   : 6.67px;
-    z-index         : 99;
-    position        : relative;
-    overflow        : hidden;
-    padding-bottom  : 33px;
+    width            : 100%;
+    max-width        : 960px;
+    height           : fit-content;
+    background-color : var(--white);
+    border-radius    : 6.67px;
+    z-index          : 99;
+    position         : relative;
+    overflow         : hidden;
+    padding-bottom   : 33px;
+    animation        : openModalAnimation .5s ease;
+    -webkit-animation: openModalAnimation .5s ease;
 }
 
 .modal-close-button {

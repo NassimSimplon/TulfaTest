@@ -130,6 +130,17 @@
    }
  }
 
+ @keyframes openModalAnimation {
+   from {
+     scale: 0.9;
+
+   }
+   to {
+     scale: 1;
+
+   }
+ }
+
  .hideAnimation,
  .hideAnimation * {
    visibility: hidden !important;
