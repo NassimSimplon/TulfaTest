@@ -31,15 +31,18 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    animation: videoBackground 3s ease-out;
-    -webkit-animation: videoBackground 3s ease-out;
-    
+    animation: videoBackground .9s ease-out;
+    -webkit-animation: videoBackground .9s ease-out;
 }
 
 @keyframes videoBackground {
     0% {
-        transform: translate(-50%, -50%) scale(3);
-    }
+        transform: translate(-50%, -50%) scale(1.5);
+        -webkit-transform: translate(-50%, -50%) scale(1.5);
+        -moz-transform: translate(-50%, -50%) scale(1.5);
+        -ms-transform: translate(-50%, -50%) scale(1.5);
+        -o-transform: translate(-50%, -50%) scale(1.5);
+}
     100% {
         transform: translate(-50%, -50%) scale(1);
     }

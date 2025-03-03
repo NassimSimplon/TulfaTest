@@ -9,6 +9,8 @@ const VideoPlayer = ({
   muted,
   playsInline,
   className,
+  handleError,
+  handleLoadedData,
 }) => {
   return (
     <video
@@ -17,6 +19,8 @@ const VideoPlayer = ({
       muted={muted}
       playsInline={playsInline}
       className={className}
+      onCanPlay={handleLoadedData}
+      onError={handleError}
     >
       <source src={src} type={type} />
     </video>
@@ -32,8 +36,9 @@ VideoPlayer.propTypes = {
   muted: PropTypes.bool,
   playsInline: PropTypes.bool,
   className: PropTypes.string,
+  handleLoadedData: PropTypes.func,
+  handleError: PropTypes.func,
 };
-
 // Default props
 VideoPlayer.defaultProps = {
   autoPlay: true,

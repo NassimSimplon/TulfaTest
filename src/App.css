@@ -59,7 +59,10 @@
  }
 
 
-
+.error-message{
+  color:var(--dark-purple);
+  font-weight: bold;
+}
 
  /* Animation */
  @keyframes fadeUp {

@@ -2,32 +2,43 @@ import "./App.css";
 import AnimLogo from "./assets/AnimLogo";
 import LazyLoader from "./HOC/LazyLoader";
 import Navbar from "./Shared/navbar";
-import { Fragment, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
-//Lazy load Components
+// Lazy load Components
 const Main = LazyLoader(() => import("./Layouts/Main"));
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  //this Code to check if the of the FIrst Section loaded successfully or not
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 2000);
+  const handleLoadedData = useCallback(() => {
+    setIsVideoLoaded(true);
   }, []);
 
+  const handleError = useCallback(() => {
+    setHasError(true);
+    setIsVideoLoaded(false);
+  }, []);
   return (
-    <Fragment>
-      {!isLoaded && (
+    <>
+      {!isVideoLoaded && (
         <div className="loader">
-          <div className="logo-box">
-            <AnimLogo />
-          </div>
+          {hasError ? (
+            <div className="error-message">
+              <p>Error loading Please refresh the Page.</p>
+            </div>
+          ) : (
+            <div className="logo-box">
+              <AnimLogo />
+            </div>
+          )}
         </div>
       )}
+
       <Navbar />
-      <Main />
-    </Fragment>
+      <Main handleError={handleError} handleLoadedData={handleLoadedData} />
+    </>
   );
 }
 
