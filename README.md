@@ -19,10 +19,6 @@ Tulfa App is a modern web application built with Vite and React. It showcases a 
 
 ## Folder Structure
 ```
-    └── 📁public
-        └── 📁videos
-            └── banner.webm
-        └── vite.svg
     └── 📁src
         └── App.css
         └── App.jsx
