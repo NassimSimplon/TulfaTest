@@ -1,0 +1,66 @@
+.CustomizedSofas {
+    width : 100%;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    position        : relative;
+    z-index         : 0;
+    overflow        : hidden;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+    gap             : 20px;
+    padding         : 70px 0;
+}
+
+.CustomizedSofas::after {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index         : -1;
+}
+
+.CustomizedSofas-title {
+    background: linear-gradient(to right,
+            var(--secondary-color) 0%,
+            var(--yellow) 100%);
+    padding: 10px;
+    width  : fit-content !important;
+    font-size: var(--fontSize);
+    color    : var(--white);
+    margin-inline    : auto;
+    animation        : fadeUp 2s ease;
+    -webkit-animation: fadeUp 2s ease;
+}
+
+.slider-manual-box {
+    width            : 700px !important;
+    height           : 600px !important;
+    overflow         : hidden;
+    margin           : auto;
+    animation        : fadeDown 3s ease;
+    -webkit-animation: fadeDown 3s ease;
+}
+
+/* @media screen  */
+@media screen and (max-width: 1024px) {
+    .CustomizedSofas-title {
+        font-size: var(--responsiveFontSize);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider-manual-box {
+        width : 100% !important;
+        height: 100% !important;
+    }
+
+    .CustomizedSofas {
+        height        : fit-content;
+        padding-bottom: 70px;
+    }
+}

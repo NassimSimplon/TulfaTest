@@ -1,0 +1,18 @@
+.StickySection {
+    width   : 100%;
+    height  : 100%;
+    position: relative;
+    scroll-behavior : smooth;
+    scroll-snap-type: x mandatory;
+    border-radius   : 8px;
+    background-color: var(--white)
+}
+
+
+.StickySection section {
+    scroll-snap-align: auto;
+    width   : 100%;
+    height  : 100vh;
+    position: sticky;
+    top     : 0;
+}

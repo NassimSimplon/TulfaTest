@@ -1,0 +1,44 @@
+.SizeOfFurnitureSection {
+    position        : relative;
+    width           : 100%;
+    height          : 100vh;
+    overflow        : hidden;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    z-index         : 2;
+    background-color: #f0f3fb;
+    text-align      : center;
+    padding         : 30px 45px;
+    box-sizing      : border-box;
+}
+
+.SizeOfFurnitureSection-image-section {
+    width            : 100%;
+    animation        : fadeUp 3s ease;
+    -webkit-animation: fadeUp 3s ease;
+}
+
+.SizeOfFurnitureSection-image {
+    width     : 100%;
+    object-fit: cover;
+}
+
+.SizeOfFurnitureSection-title {
+    width            : 100%;
+    text-align       : center;
+    position         : absolute;
+    bottom           : 10%;
+    left             : 0;
+    z-index          : 1;
+    color            : var(--dark-purple);
+    font-size        : 16px;
+    animation        : fadeDown 3s ease;
+    -webkit-animation: fadeDown 3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .SizeOfFurnitureSection {
+        display: none;
+    }
+}

@@ -1,0 +1,74 @@
+ .manualSlider-container {
+   display       : flex;
+   flex-direction: column;
+   align-items   : center;
+   width         : 100%;
+   height        : 100%;
+   margin        : 0 auto;
+ }
+
+ .image-manualSlider {
+   width   : 100%;
+   overflow: hidden;
+   border  : none;
+ }
+
+ .image-manualSlider img {
+   width : 100%;
+   height: auto;
+
+   animation        : fadeInDown 1s ease;
+   -webkit-animation: fadeInDown 1s ease;
+ }
+
+ @keyframes fadeInDown {
+   0% {
+     opacity  : 0;
+     transform: translateY(-20px);
+   }
+
+   100% {
+     opacity  : 1;
+     transform: translateY(0);
+   }
+ }
+
+ .button-container {
+   margin-top    : 20px;
+   display       : flex;
+   flex-direction: row;
+   align-items   : center;
+   gap           : 10px;
+ }
+
+ .button-container button {
+   width                  : 50px !important;
+   height                 : 50px !important;
+   border                 : solid 1px var(--yellow);
+   border-radius          : 50%;
+   overflow               : hidden;
+   display                : flex;
+   justify-content        : center;
+   align-items            : center;
+   cursor                 : pointer;
+   position               : relative;
+   background-position    : center center;
+   background-clip        : cover;
+   -webkit-background-clip: cover;
+   -webkit-border-radius  : 50%;
+   -moz-border-radius     : 50%;
+   -ms-border-radius      : 50%;
+   -o-border-radius       : 50%;
+ }
+
+ .button-container button:nth-child(1) {
+   background-image: url("https://i.postimg.cc/xCPT9P99/blue-sofa.webp");
+ }
+
+ .button-container button:nth-child(2) {
+   background-image: url("https://i.postimg.cc/Y97CcPKX/grey-sofa.webp");
+ }
+
+ .button-container button:nth-child(3) {
+   background-image: url("https://i.postimg.cc/WbzbPrCP/violet-sofa.webp");
+ }

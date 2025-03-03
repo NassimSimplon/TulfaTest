@@ -1,0 +1,52 @@
+:root {
+  --primary-color     : #433E99;
+  --secondary-color   : #EF4B32;
+  --white             : #fff;
+  --yellow            : #FFD222;
+  --dark-purple       : #2A266A;
+  --green             : #997915;
+  --fontSize          : 3vw;
+  --responsiveFontSize: 7vw;
+  --black             : black;
+  --grey              : #b2b2b2;
+  --soft-white        : #F9FAFF;
+}
+
+* {
+  box-sizing : border-box;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important
+}
+
+body {
+  margin: 0;
+}
+
+*::-webkit-scrollbar {
+  width           : 8px;
+  background-color: var(--white);
+}
+
+*::-webkit-scrollbar-thumb {
+  width        : 8px;
+  background   : linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 100%);
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-corner {
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+  cursor         : pointer;
+}
+
+button {
+  cursor : pointer;
+  border : none;
+  outline: none;
+}
+
+img {
+  aspect-ratio: 2 / 1;
+}
