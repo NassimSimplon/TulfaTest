@@ -2,7 +2,7 @@ import "./App.css";
 import AnimLogo from "./assets/AnimLogo";
 import LazyLoader from "./HOC/LazyLoader";
 import Navbar from "./Shared/navbar";
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 
 // Lazy load Components
 const Main = LazyLoader(() => import("./Layouts/Main"));
@@ -19,6 +19,14 @@ function App() {
   const handleError = useCallback(() => {
     setHasError(true);
     setIsVideoLoaded(false);
+  }, []);
+  
+    useEffect(() => {
+    setTimeout(() => {
+      setTimeout(() => {
+        setIsVideoLoaded(true);
+      }, 1500);
+    });
   }, []);
   return (
     <>
