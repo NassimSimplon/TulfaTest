@@ -1,6 +1,6 @@
 import "./AutoSlider.css";
 import ResponsiveImage from "../../ReUsableComponents/ResponsiveImage";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 //Images
 const images = [
@@ -23,15 +23,15 @@ const images = [
 const AutoSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  },[]);
 
   // Auto-slide effect
   useEffect(() => {
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   return (
     <div className="slider-container">
