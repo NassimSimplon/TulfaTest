@@ -8,7 +8,7 @@ const BannerSection = () => {
     <section className="banner" ref={banner.ref}>
       <div className="text-block">
         <div className={`  ${banner.isInView ? "title-box" : "hideAnimation"}`}>
-          <h1 className="banner-text">Welcome to Tufla</h1>{" "}
+          <h1 className="banner-text">Welcome to Tulfa</h1>{" "}
         </div>
       </div>
       <div
