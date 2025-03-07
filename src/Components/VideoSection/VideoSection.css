@@ -45,11 +45,11 @@
 
 @keyframes videoBackground {
     0% {
-        transform: translate(-50%, -50%) scale(4);
-        -webkit-transform: translate(-50%, -50%) scale(4);
-        -moz-transform: translate(-50%, -50%) scale(4);
-        -ms-transform: translate(-50%, -50%) scale(4);
-        -o-transform: translate(-50%, -50%) scale(4);
+        transform: translate(-50%, -50%) scale(3.5);
+        -webkit-transform: translate(-50%, -50%) scale(3.5);
+        -moz-transform: translate(-50%, -50%) scale(3.5);
+        -ms-transform: translate(-50%, -50%) scale(3.5);
+        -o-transform: translate(-50%, -50%) scale(3.5);
 }
     100% {
         transform: translate(-50%, -50%) scale(1);
