@@ -39,8 +39,8 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    animation: videoBackground 1.5s ease-out;
-    -webkit-animation: videoBackground 1.5s ease-out;
+    animation: videoBackground 1.1s ease-out;
+    -webkit-animation: videoBackground 1.1s ease-out;
 }
 
 @keyframes videoBackground {
