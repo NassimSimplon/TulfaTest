@@ -18,10 +18,6 @@ function App() {
     setIsMainLoaded(true);
   }, []);
 
-  const handleLoadedData = useCallback(() => {
-    setIsVideoLoaded(true);
-  }, []);
-
   const handleError = useCallback(() => {
     setHasError(true);
     setIsVideoLoaded(false);
@@ -32,8 +28,8 @@ function App() {
     if (!isMainLoaded) return;
     const video = videoRef.current;
     if (!video) return;
-    handleLoadedData();
-  }, [isMainLoaded, handleLoadedData]);
+    setIsVideoLoaded(true);
+  }, [isMainLoaded,isVideoLoaded]);
 
   return (
     <>
