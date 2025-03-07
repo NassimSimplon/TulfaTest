@@ -1,7 +1,7 @@
 import "./ResponsiveImage.css";
 import AnimLogo from "../../assets/AnimLogo";
 import PropTypes from "prop-types";
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 
 // ResponsiveImage Component
 const ResponsiveImage = ({
@@ -12,45 +12,31 @@ const ResponsiveImage = ({
   height,
   className,
   lazyLoading,
-  style
+  style,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-//Check the image Load
-  const handleImageLoad = () => {
+  //Check the image Load
+  const handleImageLoad = useCallback(() => {
     setIsLoaded(true);
-  };
+  }, []);
 
-  const handleImageError = () => {
+  const handleImageError = useCallback(() => {
     setHasError(true);
-  };
-
-  // Preload the webp image for LCP optimization
-  useEffect(() => {
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.href = webpSrc;  
-    link.as = "image";
-    link.type = "image/webp";
-    document.head.appendChild(link);
-
-    return () => {
-      document.head.removeChild(link);
-    };
-  }, [webpSrc]);  
+  }, []);
 
   return (
-    <picture >
-      <source   srcSet={webpSrc} type="image/webp" />
-  
+    <picture>
+      <source srcSet={webpSrc} type="image/webp" />
+
       {(hasError || !isLoaded) && (
         <div className="loaderItem">
           <AnimLogo />
         </div>
       )}
       <img
-      style={style}
+        style={style}
         src={fallbackSrc}
         alt={alt}
         loading={lazyLoading ? "lazy" : "eager"}
