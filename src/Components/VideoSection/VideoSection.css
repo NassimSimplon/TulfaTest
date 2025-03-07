@@ -30,26 +30,26 @@
     -ms-transform: translate(-50%, -50%) scale(1);
     -o-transform: translate(-50%, -50%) scale(1);
     transform-origin: center center;
-    -webkit-transform-origin: center center;  
-    -moz-transform-origin: center center;   
-    -ms-transform-origin: center center;     
-    -o-transform-origin: center center;     
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
     object-fit: contain;
-    animation: videoBackground .9s ease-out;
-    -webkit-animation: videoBackground .9s ease-out;
+    animation: videoBackground 1.5s ease-out;
+    -webkit-animation: videoBackground 1.5s ease-out;
 }
 
 @keyframes videoBackground {
     0% {
-        transform: translate(-50%, -50%) scale(1.5);
-        -webkit-transform: translate(-50%, -50%) scale(1.5);
-        -moz-transform: translate(-50%, -50%) scale(1.5);
-        -ms-transform: translate(-50%, -50%) scale(1.5);
-        -o-transform: translate(-50%, -50%) scale(1.5);
+        transform: translate(-50%, -50%) scale(4);
+        -webkit-transform: translate(-50%, -50%) scale(4);
+        -moz-transform: translate(-50%, -50%) scale(4);
+        -ms-transform: translate(-50%, -50%) scale(4);
+        -o-transform: translate(-50%, -50%) scale(4);
 }
     100% {
         transform: translate(-50%, -50%) scale(1);

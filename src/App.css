@@ -58,12 +58,6 @@
    }
  }
 
-
-.error-message{
-  color:var(--dark-purple);
-  font-weight: bold;
-}
-
  /* Animation */
  @keyframes fadeUp {
 
@@ -138,6 +132,7 @@
      scale: 0.9;
 
    }
+
    to {
      scale: 1;
 

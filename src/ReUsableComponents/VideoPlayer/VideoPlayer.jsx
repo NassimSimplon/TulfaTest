@@ -9,18 +9,14 @@ const VideoPlayer = ({
   muted,
   playsInline,
   className,
-  handleError,
-  videoRef,
 }) => {
   return (
     <video
-      ref={videoRef}
       autoPlay={autoPlay}
       loop={loop}
       muted={muted}
       playsInline={playsInline}
       className={className}
-      onError={handleError}
       key={src}
     >
       <source src={src} type={type} />
@@ -39,10 +35,6 @@ VideoPlayer.propTypes = {
   muted: PropTypes.bool,
   playsInline: PropTypes.bool,
   className: PropTypes.string,
-  handleError: PropTypes.func,
-  videoRef: PropTypes.shape({
-    current: PropTypes.instanceOf(Element),
-  }),
 };
 
 // Default props
