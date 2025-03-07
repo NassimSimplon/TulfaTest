@@ -45,7 +45,7 @@ const AutoSlider = () => {
             webpSrc={image.webpSrc}
             fallbackSrc={image.fallbackSrc}
             width={"100%"}
-            height={"auto"}
+            height={"100%"}
             alt={`Image with ID ${image.id}`}
             className="slider-image"
             lazyLoading={false}
