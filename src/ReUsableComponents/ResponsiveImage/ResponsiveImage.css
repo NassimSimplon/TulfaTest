@@ -6,9 +6,11 @@
     justify-content: center;
     align-items    : center;
 }
-.block{
+
+.block {
     display: block;
 }
-.none{
+
+.none {
     display: none;
 }

@@ -30,7 +30,7 @@ WorkCard.propTypes = {
   webpSrc: PropTypes.string.isRequired,
   fallbackSrc: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  onOpenModal: PropTypes.func.isRequired, 
+  onOpenModal: PropTypes.func.isRequired,
 };
 
 export default memo(WorkCard);

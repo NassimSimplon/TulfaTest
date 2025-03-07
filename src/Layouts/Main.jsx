@@ -1,18 +1,29 @@
-import CustomizedSofas from "../Components/CustomizedSofas";
-import OutroSection from "../Components/OutroSection";
+import LazyLoader from "../HOC/LazyLoader";
 import PropTypes from "prop-types";
-import SizeOfFurnitureSection from "../Components/SizeOfFurnitureSection";
-import StickySection from "./StickySection/StickySection";
-import WorkPresentation from "../Components/WorkPresentation";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
-const Main = ({ handleError, handleLoadedData }) => {
+// Lazy load child components
+const StickySection = LazyLoader(() => import("../Layouts/StickySection"));
+const CustomizedSofas = LazyLoader(() =>
+  import("../Components/CustomizedSofas")
+);
+const SizeOfFurnitureSection = LazyLoader(() =>
+  import("../Components/SizeOfFurnitureSection")
+);
+const WorkPresentation = LazyLoader(() =>
+  import("../Components/WorkPresentation")
+);
+const OutroSection = LazyLoader(() => import("../Components/OutroSection"));
+
+const Main = ({ handleError, videoRef, handleLoadedMain }) => {
+  useEffect(() => {
+    if (handleLoadedMain) {
+      handleLoadedMain();
+    }
+  }, [handleLoadedMain]);
   return (
     <main>
-      <StickySection
-        handleError={handleError}
-        handleLoadedData={handleLoadedData}
-      />
+      <StickySection handleError={handleError} videoRef={videoRef} />
       <SizeOfFurnitureSection />
       <CustomizedSofas />
       <WorkPresentation />
@@ -21,7 +32,10 @@ const Main = ({ handleError, handleLoadedData }) => {
   );
 };
 Main.propTypes = {
-  handleLoadedData: PropTypes.func.isRequired,
   handleError: PropTypes.func.isRequired,
+  videoRef: PropTypes.shape({
+    current: PropTypes.instanceOf(Element),
+  }),
+  handleLoadedMain: PropTypes.func,
 };
 export default memo(Main);

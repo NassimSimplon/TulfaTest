@@ -12,6 +12,7 @@ const ResponsiveImage = ({
   height,
   className,
   lazyLoading,
+  style
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -20,7 +21,6 @@ const ResponsiveImage = ({
   const handleImageLoad = () => {
     setIsLoaded(true);
   };
-
 
   const handleImageError = () => {
     setHasError(true);
@@ -41,8 +41,8 @@ const ResponsiveImage = ({
   }, [webpSrc]);  
 
   return (
-    <picture>
-      <source srcSet={webpSrc} type="image/webp" />
+    <picture >
+      <source   srcSet={webpSrc} type="image/webp" />
   
       {(hasError || !isLoaded) && (
         <div className="loaderItem">
@@ -50,6 +50,7 @@ const ResponsiveImage = ({
         </div>
       )}
       <img
+      style={style}
         src={fallbackSrc}
         alt={alt}
         loading={lazyLoading ? "lazy" : "eager"}
@@ -72,6 +73,7 @@ ResponsiveImage.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   className: PropTypes.string,
   lazyLoading: PropTypes.bool,
+  style: PropTypes.object,
 };
 
 ResponsiveImage.defaultProps = {

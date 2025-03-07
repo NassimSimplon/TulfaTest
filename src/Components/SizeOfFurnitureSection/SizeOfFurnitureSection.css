@@ -7,7 +7,7 @@
     justify-content : center;
     align-items     : center;
     z-index         : 2;
-    background-color: var(--soft-white );
+    background-color: var(--soft-grey );
     text-align      : center;
     padding         : 30px 45px;
     box-sizing      : border-box;

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, { memo } from "react";
 
 const VideoPlayer = ({
   src,
@@ -10,19 +10,21 @@ const VideoPlayer = ({
   playsInline,
   className,
   handleError,
-  handleLoadedData,
+  videoRef,
 }) => {
   return (
     <video
+      ref={videoRef}
       autoPlay={autoPlay}
       loop={loop}
       muted={muted}
       playsInline={playsInline}
       className={className}
-      onCanPlay={handleLoadedData}
       onError={handleError}
+      key={src}
     >
       <source src={src} type={type} />
+      Your browser does not support the video tag.
     </video>
   );
 };
@@ -36,9 +38,12 @@ VideoPlayer.propTypes = {
   muted: PropTypes.bool,
   playsInline: PropTypes.bool,
   className: PropTypes.string,
-  handleLoadedData: PropTypes.func,
   handleError: PropTypes.func,
+  videoRef: PropTypes.shape({
+    current: PropTypes.instanceOf(Element),
+  }),
 };
+
 // Default props
 VideoPlayer.defaultProps = {
   autoPlay: true,
@@ -48,4 +53,4 @@ VideoPlayer.defaultProps = {
   className: "video-loader",
 };
 
-export default VideoPlayer;
+export default memo(VideoPlayer);

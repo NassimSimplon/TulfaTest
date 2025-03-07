@@ -39,7 +39,7 @@ const AutoSlider = () => {
         className="slider-wrapper"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {images.map((image) => (
+        {images?.map((image) => (
           <ResponsiveImage
             key={image.id}
             webpSrc={image.webpSrc}

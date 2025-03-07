@@ -1,4 +1,4 @@
-## ⌨️ 👩‍💻 Author 🌐 💻
+## 👨💻 Author
 
 **Nassim Khelifi**  
 - LinkedIn: [Nassim khelifi](https://www.linkedin.com/in/khelifi-nassim/)  

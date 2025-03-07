@@ -13,7 +13,7 @@ const useImageSlider = (images) => {
     },
     [images.length]
   );
-  
+
   return { currentIndex, goToImage };
 };
 

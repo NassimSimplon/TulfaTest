@@ -6,18 +6,15 @@ const BannerSection = () => {
   const banner = useScrollTrigger(0.4);
   return (
     <section className="banner" ref={banner.ref}>
-      <div className="text-block" >
+      <div className="text-block">
         <div className={`  ${banner.isInView ? "title-box" : "hideAnimation"}`}>
-          <h1
-            className="banner-text"
-          >
-            Welcome to Tufla
-          </h1>{" "}
+          <h1 className="banner-text">Welcome to Tufla</h1>{" "}
         </div>
       </div>
       <div
-        className={`  ${banner.isInView ? "responsive-image-box" : "hideAnimation"
-          }`}
+        className={`  ${
+          banner.isInView ? "responsive-image-box" : "hideAnimation"
+        }`}
       >
         <ResponsiveImage
           webpSrc={
