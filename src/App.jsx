@@ -29,7 +29,7 @@ function App() {
     const video = videoRef.current;
     if (!video) return;
     setIsVideoLoaded(true);
-  }, [isMainLoaded,isVideoLoaded]);
+  }, [isMainLoaded,isVideoLoaded,videoRef]);
 
   return (
     <>
