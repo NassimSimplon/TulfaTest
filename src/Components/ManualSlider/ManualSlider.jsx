@@ -32,9 +32,14 @@ const ManualSlider = ({
       </div>
       {showButtons && (
         <div className="button-container">
-          <button type="button" onClick={() => goToImage(0)} />
-          <button type="button" onClick={() => goToImage(1)} />
-          <button type="button" onClick={() => goToImage(2)} />
+          {imagesWebp.map((_, index) => (
+            <button
+              key={`btn-${index}-index`}
+              type="button"
+              aria-label={`Go to image ${index + 1}`}
+              onClick={() => goToImage(index)}
+            />
+          ))}
         </div>
       )}
     </div>

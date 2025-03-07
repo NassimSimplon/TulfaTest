@@ -7,6 +7,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 // Lazy load Components
 const Main = LazyLoader(() => import("./Layouts/Main"));
 
+
 function App() {
   //Ref
   const videoRef = useRef(null);
@@ -29,7 +30,7 @@ function App() {
     const video = videoRef.current;
     if (!video) return;
     setIsVideoLoaded(true);
-  }, [isMainLoaded,isVideoLoaded,videoRef]);
+  }, [isMainLoaded, videoRef]);
 
   return (
     <>
@@ -46,7 +47,6 @@ function App() {
           )}
         </div>
       )}
-
       <Navbar />
       <Main
         videoRef={videoRef}

@@ -24,6 +24,7 @@ const VideoPlayer = ({
       key={src}
     >
       <source src={src} type={type} />
+      <track kind="subtitles" srcLang="en" label="English" />
       Your browser does not support the video tag.
     </video>
   );

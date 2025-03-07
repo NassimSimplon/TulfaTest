@@ -5,7 +5,12 @@ import { memo } from "react";
 const ColorOption = ({ label, index, onClick }) => (
   <div className="color-block">
     <div className="color-Name">{label}</div>
-    <button type="button" onClick={() => onClick(index)} className="color-button" />
+    <button
+      aria-label="Color button"
+      type="button"
+      onClick={() => onClick(index)}
+      className="color-button"
+    />
   </div>
 );
 
